@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">待审批列表</h1>
+	    </header>
+		<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div  id ="applist" class="mui-scroll">
+				<!--数据列表-->
+				<ul class="mui-table-view">
+			        <li class="mui-table-view-cell mui-media" v-for="item in applist" v-on:tap="list(item.billid,item.billtype)" >
+			            <a data-href="" id ={{item.billid}}>
+			            	<div class ="mui-content" style="width: 100%;">
+			            		
+			           
+			                <div class="mui-row" style ="padding-top:1%;padding-left: 5%;padding-right: 5%;">
+			                <div class="mui-col-sm-6 mui-pager" style="color: red;">
+			                	   单据号:{{item.vbillcode}}
+			                </div>
+			                <div class=" mui-pager" style="color: red;">
+			                	   单据类型:{{item.billtype}}
+			                </div>
+			                </div>
+			                <div class="mui-row" style ="padding-top: 20px;padding-left: 5%;padding-right: 5%;">
+			                	    <div class=" mui-col-sm-6 mui-col-xs-6 " >
+                                        提交人：{{item.sender}}
+			                  	</div>
+			                  	<div class="mui-col-sm-6 mui-col-xs-6 ">
+                                        提交日期：{{item.dbilldate}}
+			                  	</div>
+			                  	
+			                </div>
+			                
+			                 <div class="mui-row" style ="padding-top: 20px;padding-left: 5%;padding-right: 5%;">
+			                	    
+			                  	<div class="mui-col-sm-6 mui-col-xs-6 " >
+                                        提交部门：{{item.deptid}}
+			                  	</div>
+			                  	<div class="mui-col-sm-6 mui-col-xs-6 "  >
+                                        金额：{{item.nmoney}}
+			                  	</div>
+			                </div>
+			               </div>
+			            </a>
+			        </li>
+			    </ul>
+			</div>
+		</div>
+		
+		
+	</body>
+         <script src="js/mui.min.js"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue-mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.10.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/Ajax.js" ></script>
+		<script type="text/javascript" src="js/appjs/approvelist.js" ></script>
+		
+</html>

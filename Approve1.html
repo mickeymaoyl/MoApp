@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+	
+	   
+			
+		<div id="app" style="margin: 0 auto;padding-top: 25%;">
+		<ul class="mui-table-view mui-grid-view mui-grid-9" >
+		<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" style="background-color: red;" v-on:tap="list('F-01')">
+		    <a href="#">
+		        <span class="mui-icon mui-icon-home"><span class="mui-badge mui-badge-red">{{yfgl}}</span></span>
+		        <div class="mui-media-body">应付管理</div>
+		    </a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" style="background-color: blue;">
+		    <a href="#">
+		        <span class="mui-icon mui-icon-email"><span class="mui-badge mui-badge-red" id="bxglid">{{bxgl}}</span></span>
+		        <div class="mui-media-body">报销管理</div>
+		    </a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6"style="background-color: orange;">
+		    <a href="#">
+		        <span class="mui-icon mui-icon-chatbubble"><span class="mui-badge mui-badge-red" v-if="htgl>0">{{htgl}}</span></span>
+		        <div class="mui-media-body">合同管理</div>
+		    </a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" style="background-color: greenyellow;">
+		    <a href="#">
+		        <span class="mui-icon mui-icon-location"><span class="mui-badge mui-badge-red" v-if="xzgl>0">{{xzgl}}</span></span>
+		        <div class="mui-media-body">薪资管理</div>
+		    </a>
+		</li>
+		
+		    </ul>
+		</div>
+		
+	</body>
+        <script src="js/mui.min.js"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue-mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.10.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/Ajax.js" ></script>
+		<script type="text/javascript" src="js/appjs/approve1.js" ></script>
+		
+</html>

@@ -1,63 +1,88 @@
 {
-	"index.html": {
-		"href": "index.html",
-		"resources": [
-			"js/mui.min.js",
-			"js/vue.js",
-			"js/vue-mui.js",
-			"js/jquery-1.10.2.js",
-			"js/jquery-1.10.2.min.js",
-			"js/appjs/index.js",
-			"css/mui.min.css",
-			"js/Ajax.js",
-			"Approve1.html",
-			"fonts/mui.ttf",
-			"js/appjs/approve1.js",
-			"Approve2.html"
-		],
-		"refer": [
-			"Approve2.html",
-			"Approve1.html",
-			"approvelist.html"
-		],
-		"priority": 0
-	},
-	"Approve1.html": {
-		"resources": [
-			"js/appjs/approve1.js",
-			"js/Ajax.js",
-			"js/jquery-1.10.2.js",
-			"js/vue.js",
-			"js/vue-mui.js",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"js/jquery-1.10.2.min.js"
-		],
-		"refer": [
-			"approvelist.html"
-		]
-	},
-	"approvelist.html": {
-		"resources": [
-			"js/appjs/approvelist.js",
-			"js/Ajax.js",
-			"js/jquery-1.10.2.js",
-			"js/vue.js",
-			"js/vue-mui.js",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/mui.min.css",
-			"js/jquery-1.10.2.min.js"
-		],
-		"refer": [
-			"index.html"
-		]
-	},
-	"Approve2.html": {
-		"resources": [
-			"fonts/mui.ttf",
-			"css/mui.min.css"
-		]
-	}
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/vue.js",
+      "js/vue-mui.js",
+      "js/jquery-1.10.2.js",
+      "js/jquery-1.10.2.min.js",
+      "js/appjs/index.js",
+      "css/mui.min.css",
+      "js/Ajax.js",
+      "Approve1.html",
+      "fonts/mui.ttf",
+      "js/appjs/approve1.js",
+      "Approve2.html"
+    ],
+    "refer": [
+      "Approve2.html",
+      "Approve1.html",
+      "approvelist.html"
+    ],
+    "priority": 0
+  },
+  "Approve1.html": {
+    "resources": [
+      "js/appjs/approve1.js",
+      "js/Ajax.js",
+      "js/jquery-1.10.2.js",
+      "js/vue.js",
+      "js/vue-mui.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/jquery-1.10.2.min.js"
+    ],
+    "refer": [
+      "approvelist.html"
+    ]
+  },
+  "approvelist.html": {
+    "resources": [
+      "js/appjs/approvelist.js",
+      "js/Ajax.js",
+      "js/jquery-1.10.2.js",
+      "js/vue.js",
+      "js/vue-mui.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/jquery-1.10.2.min.js"
+    ],
+    "refer": [
+      "index.html",
+      "ApproveInfo.html"
+    ]
+  },
+  "Approve2.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ]
+  },
+  "login.html": {
+    "resources": [
+      "js/mui.min.js",
+      "js/appjs/login.js",
+      "css/mui.min.css",
+      "js/mui.enterfocus.js",
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  },
+  "ApproveInfo.html": {
+    "resources": [
+      "js/appjs/approveInfo.js",
+      "js/Ajax.js",
+      "js/jquery-1.10.2.js",
+      "js/vue.js",
+      "js/vue-mui.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/jquery-1.10.2.min.js"
+    ]
+  }
 }

@@ -4,6 +4,7 @@ var app = new Vue({
       			initIndex: 0, //[初始化参数]
       			title: '首页',
       			activeTab: 'Approve1.html',
+      			username:'',
       			tabbar: [],
       			subStyle: {
       				top: '45px',
@@ -13,22 +14,8 @@ var app = new Vue({
       		created:function (){
       			// Vue实例化对象
       			var self = this;  
-//    			$.ajax({
-//    				type:"post",
-//    				url:"http://localhost:8089/testTab",
-//    				async:true,
-//    				crossDomain: true,
-//    				dataType: "json",
-//    				success:function(data){
-//    					self.tabbar=data;
-//    				    self.initR();
-//    				},
-//    				error:function(err){
-//    					console.info(err)
-//    				}
-//    				
-//    			});
-             console.log("dddd");
+
+            
              param  = new Object();
              sendUrlCmd(this,"wxApprove","testTab",param,self.initData);
       		},
@@ -71,11 +58,10 @@ var app = new Vue({
       			// 初始化
       			if(mui.os.plus){
       				mui.plusReady(function() {
-      					console.log("ccccc");
 	      				var curWs = plus.webview.currentWebview();
 	      				for(var i=0;i < self.tabbar.length;i++){
 	      					var subUrl = self.tabbar[i].url;
-	      					var subWs = plus.webview.create(subUrl, subUrl, self.subStyle);
+	      					var subWs = plus.webview.create(subUrl, subUrl, self.subStyle,{username:curWs.username});
 							if(i != self.initIndex){
 								subWs.hide();
 							}

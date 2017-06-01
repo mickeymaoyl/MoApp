@@ -1,19 +1,31 @@
 var app1 =new Vue({
 	el:"#app",
+    
+    ready:function(){
+    	        
+    },
     data:{
     	   bxgl:'',
     	   yfgl:'',
     	   htgl:'',
     	   xzgl:'',
-    	   urls:[]
+    	   urls:[],
+    	   _username:''
     	   
     },
     created:function(){
-    	     var self =this;
+    	       var self =this;
+    	        mui.plusReady(function(){
+    	        	       var curWB =plus.webview.currentWebview();
+		 	 	   self._username=curWB.username;
+		 	 	   console.log(self._username);
+		 	 	    initDatas(self);
+		            self.initR();
+    	        });
 //  	    	 param  = new Object();
 //       sendUrlCmd(this,"wxApprove","approveIndex",param,self.initData);
-		 initDatas(self);
-		 self.initR();
+         
+		
       	
     },
     methods:{
@@ -44,16 +56,14 @@ var app1 =new Vue({
 //  	        },
     	        list:function(billtype){
     	        	    var self =this;
+    	        	    
 //  	        	    console.log(billtype);
     	        	    mui.openWindow({
     	        	             	url: 'approvelist.html',
-							id: 'homesub',
-							styles: {  
-        						top: 5 //新页面顶部位置  
-       
-                            },  
+							id: 'homesub',  
 							extras: {
-								billtype:billtype
+								billtype:billtype,
+								username:self._username
 							}
     	        	    });
     	        }
@@ -80,8 +90,21 @@ window.addEventListener('refresh', function(e) {
 }) ;
 
 	function initDatas (app){
-		 	 param  = new Object();
-	         sendUrlCmd(this,"wxApprove","approveIndex",param,app.setData);
+		 	 var param  = new Object();
+//		 	 queryUserName(app);
+		 	 param.username=app._username;
+		 	 console.log( app._username);
+	         sendUrlCmd(this,"wxApprove","querynotappnums",param,app.setData);
 	};
 	
+	
+	function queryUserName(app){
+		 	 if(mui.os.plus){		 	 	   
+//		 	 	   var curWB =plus.webview.currentWebview();
+//		 	 	   app._username=curWB.username;
+		 	 	   
+		 	 }else{
+		 	 	app._username=localStorage.getItem("username");
+		 	 }	
+	}
 
